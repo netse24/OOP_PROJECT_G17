@@ -1,4 +1,4 @@
-export class Person{
+export abstract class Person{
     private firstName: string
     private lastName: string
     private age: number
