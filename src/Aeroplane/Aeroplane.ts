@@ -4,5 +4,5 @@ import { Flight } from "../Flight/Flight";
 export class Aeroplane {
     private seats: Seat[] = [];
     private flights: Flight[] = [];
-    constructor(private registrationNumber: string,) { }
+    constructor(private registrationNumber: string) { }
 }
