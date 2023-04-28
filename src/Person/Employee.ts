@@ -7,4 +7,10 @@ export class Employee extends Person{
         super(firstName,lastName,age,gender)
         this.salary = salary
     }
+    getSalary(){
+        return this.salary
+    }
+    setSalary(salary: number){
+        this.salary = salary
+    }
 }
