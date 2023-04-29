@@ -11,7 +11,9 @@ export class BookingTrip {
     private bookingFlight: BookingFlight[] = [];
     private returnTicket: ReturnTicket[] = [];
 
-
+    getBookingFlight(){
+        return this.bookingFlight
+    }
 
     setReturnTicket(returnTicket: ReturnTicket) {
         this.returnTicket?.push(returnTicket);
@@ -30,7 +32,7 @@ export class BookingTrip {
     addPassengerBag(bag: Bag) {
         this.bags.push(bag);
     }
-
-
-
+    addBookingFlight(bookingFlight:BookingFlight) {
+        this.bookingFlight.push(bookingFlight)
+    }
 }

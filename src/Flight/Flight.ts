@@ -45,5 +45,5 @@ export class Flight {
     addDate(date: DateTime) {
         this.dateTime = date
     }
-
+    
 }
