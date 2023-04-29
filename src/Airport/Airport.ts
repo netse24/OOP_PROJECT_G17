@@ -17,10 +17,7 @@ export class Airport {
         this.passengers.push(passenger)
     }
 
-    getDetailPassenger(firstName:string,lastName:string,age:number,gender:Gender):Passenger|undefined{
-       // TODO:
-       return undefined
-    }
+    
 
     addFlight(flight:Flight,date:DateTime){
         this.flights.push(flight)
