@@ -15,11 +15,14 @@ export class Flight {
     private co_pilot: CoPilot;
     private chef: Chef;
     private meals: Meal[] = [];
-    constructor(private flightNumber: string) { }
+    constructor(private flightNumber: string) { 
+        this.flightNumber = flightNumber;
+    }
 
     getMeals() {
         return this.meals;
     }
+    
     setMeal() {
         this.bookingFlight.forEach((findMeal) => {
             this.meals.push(findMeal.getAMealFromBookingFlight());
