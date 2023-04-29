@@ -27,5 +27,5 @@ export class BookingFlight {
     getGate(){
         return this.gate;
     }
-
+    
 }
