@@ -29,7 +29,7 @@ export class Flight {
         })
     }
 
-    getGate(){
+    getGates(){
         return this.gates;
     }
 

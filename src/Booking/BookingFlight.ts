@@ -22,6 +22,8 @@ export class BookingFlight {
     getAFlight() {
         return this.flight;
     }
-
+    getGate(){
+        return this.gate;
+    }
 
 }
