@@ -23,7 +23,7 @@ export class Flight {
         return this.meals;
     }
     
-    setMeal() {
+    addMeal() {
         this.bookingFlight.forEach((findMeal) => {
             this.meals.push(findMeal.getAMealFromBookingFlight());
         })
