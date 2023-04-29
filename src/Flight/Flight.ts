@@ -29,4 +29,8 @@ export class Flight {
         })
     }
 
+    getGet(){
+        return this.gates;
+    }
+
 }
