@@ -4,14 +4,18 @@ import { Meal } from "./Meal"
 export class BookingFlight {
     private passengers: Passenger[] = [];
     private chooseMeal: Meal;
-    private flight :Flight;
-    
-    getAMealFromBookingFlight(){
+    private flight: Flight;
+
+    getAMealFromBookingFlight() {
         return this.chooseMeal;
     }
 
-    getFlightFromBookingFlight(){
+    getFlightFromBookingFlight() {
         return this.flight;
     }
+    getAFlight() {
+        return this.flight;
+    }
+
 
 }
