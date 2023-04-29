@@ -39,4 +39,7 @@ export class Passenger extends Person {
     getReferenceNumberInPasserenger(): string {
         return this.booking.getReferenceNumberInBooking()
     }
+    addBages(bag:Bag){
+        this.bages.push(bag)
+    }
 }

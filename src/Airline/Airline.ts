@@ -26,7 +26,9 @@ export class Airline {
         })
         return money;
     }
-    
+    addBooking(booking: Booking) {
+        this.bookings.push(booking)
+    }
     getAllBookings(): number {
         let allBookings = 0;
         this.bookings.forEach(booking => {
@@ -39,7 +41,7 @@ export class Airline {
         let passengersReturnTicket: number = 0;
         this.bookings.forEach((bookingTrip) => {
             bookingTrip.getAllBookingTrips().forEach((returnTicket) => {
-                passengersReturnTicket = returnTicket.getAllReturnTicket();
+                passengersReturnTicket += returnTicket.getAllReturnTicket();
             })
         })
         return passengersReturnTicket;
@@ -55,5 +57,14 @@ export class Airline {
             })
         })
         return Apassenger;
+    }
+    getAllMealsOfBooking(){
+        this.bookings.forEach(booking=>{
+            booking.getAllBookingTrips().forEach((trip) => {
+                trip.getBookingFlight().forEach((flight) =>{
+                    flight.getMealsFromBookingFlight();
+                } )
+            })
+        })
     }
 }

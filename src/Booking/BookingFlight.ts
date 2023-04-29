@@ -36,5 +36,8 @@ export class BookingFlight {
     getGate() {
         return this.gate;
     }
+    addPassengers(passenger: Passenger) {
+        this.passengers.push(passenger)
+    }
 
 }
