@@ -14,7 +14,7 @@ export class BookingFlight {
         this.chooseMeal = meal;
     }
 
-    getAMealFromBookingFlight() {
+    getAMealFromBookingFlight():Meal {
         return this.chooseMeal;
     }
 

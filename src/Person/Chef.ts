@@ -9,7 +9,7 @@ export class Chef extends Employee {
         super(salary, firstName, lastName, age, gender);
     }
 
-    getMeals(): Meal[] {
+    getMeals(fight:Flight): Meal[] {
         let allMeals: Meal[] = [];
         this.fights.forEach((meals) => {
             allMeals = meals.getMeals();

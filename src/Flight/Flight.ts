@@ -15,25 +15,26 @@ export class Flight {
     private co_pilot: CoPilot;
     private chef: Chef;
     private meals: Meal[] = [];
-    constructor(private flightNumber: string) { 
+    constructor(private flightNumber: string) {
         this.flightNumber = flightNumber;
     }
 
-    getMeals() {
+    getMeals():Meal[] {
         return this.meals;
     }
-    
-    addMeal() {
+    getGates() {
+        return this.gates;
+    }
+    addBookingFlight(bookingFlight: BookingFlight) {
+        this.bookingFlight.push(bookingFlight);
+    }
+
+    addMealFromBookingFlight() {
         this.bookingFlight.forEach((findMeal) => {
             this.meals.push(findMeal.getAMealFromBookingFlight());
         })
     }
-
-    getGates(){
-        return this.gates;
-    }
-
-    addDate(date:DateTime){
+    addDate(date: DateTime) {
         this.dateTime = date
     }
 
