@@ -19,19 +19,27 @@ export class Flight {
         this.flightNumber = flightNumber;
     }
 
-    getMeals():Meal[] {
+    getMeals(): Meal[] {
         return this.meals;
     }
-    getGates() {
+    getGates(): Gate[] {
         return this.gates;
     }
+
+    addGate(gate: Gate) {
+        this.gates.push(gate);
+    }
+
+
     addBookingFlight(bookingFlight: BookingFlight) {
         this.bookingFlight.push(bookingFlight);
     }
 
     addMealFromBookingFlight() {
         this.bookingFlight.forEach((findMeal) => {
-            this.meals.push(findMeal.getAMealFromBookingFlight());
+            findMeal.getMealsFromBookingFlight().forEach((meal) => {
+                this.meals.push(meal);
+            })
         })
     }
     addDate(date: DateTime) {

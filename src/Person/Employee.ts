@@ -10,7 +10,5 @@ export class Employee extends Person{
     getSalary(){
         return this.salary
     }
-    setSalary(salary: number){
-        this.salary = salary
-    }
+  
 }

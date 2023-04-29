@@ -5,27 +5,36 @@ import { BookingTrip } from "./BookingTrip";
 import { Meal } from "./Meal"
 export class BookingFlight {
     private passengers: Passenger[] = [];
-    private boolingTrip:BookingTrip;
-    private chooseMeal: Meal;
+    private boolingTrip: BookingTrip;
+    private chooseMeal: Meal[] = [];
     private flight: Flight;
-    private gate:Gate;
+    private gate: Gate;
 
-    setAMealFromBookingFlight(meal:Meal){
-        this.chooseMeal = meal;
+    setAMealFromBookingFlight(meal: Meal) {
+        this.chooseMeal.push(meal);
     }
 
-    getAMealFromBookingFlight():Meal {
+    getMealsFromBookingFlight(): Meal[] {
         return this.chooseMeal;
     }
 
     getFlightFromBookingFlight() {
         return this.flight;
     }
-    getAFlight() {
+    getAFlight(): Flight {
         return this.flight;
     }
-    getGate(){
+
+    setFlight(flight: Flight) {
+        this.flight = flight;
+    }
+
+    setAGateInBookingFlight(gate: Gate) {
+        this.gate = gate
+    }
+
+    getGate() {
         return this.gate;
     }
-    
+
 }

@@ -9,7 +9,7 @@ import { Person } from "./Person";
 export class Passenger extends Person {
     private bages: Bag[] = [];
     private booking: Booking;
-   
+
     private bookingFlights: BookingFlight[] = [];
 
 
@@ -19,7 +19,11 @@ export class Passenger extends Person {
         this.frequentFlyerNumber = frequentFlyerNumber;
     }
 
-    getGateOfPassenger(): Gate | undefined {
+    addBookingFlight(bookingFlight: BookingFlight) {
+        this.bookingFlights.push(bookingFlight);
+    }
+
+    getGateForPassenger(): Gate | undefined {
         let showgate: Gate | undefined = undefined
         this.bookingFlights.forEach(flight => {
             flight.getAFlight().getGates().forEach(gate => {
@@ -31,7 +35,8 @@ export class Passenger extends Person {
         return showgate;
     }
 
-    getReferenceNumberInPasserenger():string {
-        return  this.booking.getReferenceNumberInBooking()
+
+    getReferenceNumberInPasserenger(): string {
+        return this.booking.getReferenceNumberInBooking()
     }
 }

@@ -15,6 +15,18 @@ export class Airline {
         return allSalary;
     }
 
+    addEmployee(employee: Employee) {
+        this.emplyees.push(employee);
+    }
+
+    getAllMoneyNeedToPay():number {
+        let money: number = 0;
+        this.emplyees.forEach((salary) => {
+            money += salary.getSalary();
+        })
+        return money;
+    }
+    
     getAllBookings(): number {
         let allBookings = 0;
         this.bookings.forEach(booking => {
