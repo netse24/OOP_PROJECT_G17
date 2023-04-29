@@ -57,12 +57,6 @@ ROYAL.addEmployee(emy4)
 // console.log("The money that need to pay for employee:",ROYAL.getAllSalary());
 
 
-
-
-
-
-// create datetime
-
 // create passenger 
 let passenger1 = new Passenger('sreyrea', 'Han', 20, Gender.FEMALE, Meal.HALAL)
 let passenger2 = new Passenger('sreyrea', 'Han', 31, Gender.FEMALE, Meal.HALAL)
