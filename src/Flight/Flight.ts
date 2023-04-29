@@ -33,4 +33,8 @@ export class Flight {
         return this.gates;
     }
 
+    addDate(date:DateTime){
+        this.dateTime = date
+    }
+
 }

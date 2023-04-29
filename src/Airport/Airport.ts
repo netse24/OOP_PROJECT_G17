@@ -8,7 +8,7 @@ import { DateTime } from "../Calendar/DateTime";
 export class Airport {
     private gates: Gate[] = [];
     private routes: Route[] = [];
-    private flight:Flight;
+    private flights:Flight[] = [];
     private passengers:Passenger[] = [];
     private address:Address;
     constructor(private name: string) { }
@@ -18,19 +18,22 @@ export class Airport {
     }
 
     getDetailPassenger(firstName:string,lastName:string,age:number,gender:Gender):Passenger|undefined{
-       // TODO
+       // TODO:
        return undefined
     }
 
     addFlight(flight:Flight,date:DateTime){
-        // TODO:
+        this.flights.push(flight)
+        this.flights.forEach(addDate=>{
+            addDate.addDate(date);
+        })
     }
     
     addRoutes(route:Route){
         this.routes.push(route);
     }
 
-    addAddress(address:Address){
-        // TODO:
+    setAddress(address:Address){
+        this.address = address
     }
 }
