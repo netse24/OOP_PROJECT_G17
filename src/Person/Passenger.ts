@@ -34,7 +34,10 @@ export class Passenger extends Person {
         })
         return showgate;
     }
-
+    
+    setBooking(book:Booking){
+        this.booking = book;
+    }
 
     getReferenceNumberInPasserenger(): string {
         return this.booking.getReferenceNumberInBooking()

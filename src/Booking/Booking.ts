@@ -36,10 +36,10 @@ export class Booking {
     getAllBookingTrips() {
         return this.bookingTrips;
     }
-    addPassenger(passenger:Passenger){
-        this.passengers.push(passenger)
-    }
     addBookingTrips(trip:BookingTrip){
         this.bookingTrips.push(trip)
+    }
+    addPassenger(passenger:Passenger){
+        this.passengers.push(passenger)
     }
 }

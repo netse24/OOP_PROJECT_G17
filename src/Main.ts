@@ -13,10 +13,21 @@ import { Gate } from "./Airport/Gate";
 import { DateTime } from "./Calendar/DateTime";
 import { Pilot } from "./Person/Pilot";
 
-// 1. As an airport controller, I need to get the full details of a passenger’s trip from their Booking Reference Number (flights, bags, customer information…)
+// Q1. As an airport controller, I need to get the full details of a passenger’s trip from their Booking Reference Number (flights, bags, customer information…)
+let YAYA_Airline = new Airline("YAYA");
+let passenger_1 = new Passenger('sreyrea', 'Han', 20, Gender.FEMALE, Meal.HALAL);
 
+let bookingTicket1 = new Booking("A12","B12");
+bookingTicket1.isPassengerRegferenceNumberEqual("A12");
 
-// 2. As an airline manager, I want to know for a given flight, how many passengers were booking return tickets.
+bookingTicket1.addPassenger(passenger_1);
+
+YAYA_Airline.addBooking(bookingTicket1)
+passenger_1.setBooking(bookingTicket1);
+
+// console.log(YAYA_Airline.getDetailPassenger("A12"));
+
+// Q2. As an airline manager, I want to know for a given flight, how many passengers were booking return tickets.
 let airline1 = new Airline('PP Airline');
 let emyployee1 = new Employee(1000, "ta", "r", 25, Gender.MALE);
 let emyployee2 = new Employee(2000, "ta", "r", 30, Gender.FEMALE);
@@ -68,7 +79,7 @@ airline1.addEmployee(emyployee4);
 airline1.addBooking(booking1);
 // console.log("Passenger booking is:",airline1.getAllBookings(),"Trips") // test booking trip
 
-// 3. As an airline pilot, I want to know, for a given date, how many flights I have to join.
+// Q3. As an airline pilot, I want to know, for a given date, how many flights I have to join.
 let pilot1 = new Pilot(100,'ka','ry',32,Gender.FEMALE)
 let date1 = new DateTime('10/05/2023','7:00 AM');
 
@@ -85,7 +96,7 @@ bookingFlight1.setAMealFromBookingFlight(Meal.VEGENTARIAN)
 pilot1.addDateFlight(date1);
 pilot1.addFlight(flight1);
 pilot1.addFlight(flight2);
-console.log(pilot1);
+// console.log(pilot1);
 // Q4 ------------------------------------------------
 // create booking flight
 let bookingFlight = new BookingFlight();
@@ -138,7 +149,7 @@ let trip = new BookingTrip();
 trip.addPassengerBag(bag)
 
 // booking 
-let booking = new Booking('A1', 'Id1')
+let booking = new Booking('A12', 'B11')
 booking.addPassenger(passenger1)
 booking.addPassenger(passenger2)
 booking.addPassenger(passenger3)

@@ -19,13 +19,14 @@ export class Airline {
         this.emplyees.push(employee);
     }
 
-    getAllMoneyNeedToPay():number {
+    getAllMoneyNeedToPay(): number {
         let money: number = 0;
         this.emplyees.forEach((salary) => {
             money += salary.getSalary();
         })
         return money;
     }
+    
     addBooking(booking: Booking) {
         this.bookings.push(booking)
     }
@@ -51,19 +52,20 @@ export class Airline {
         let Apassenger: Passenger | undefined;
         this.bookings.forEach((booking) => {
             booking.getPassengers().forEach((passenger) => {
-                if (passenger.getReferenceNumberInPasserenger() === booking.getReferenceNumberInBooking() && booking.isPassengerRegferenceNumberEqual(referenceNumberofTrip)) {
+                if (passenger.getReferenceNumberInPasserenger() === booking.getReferenceNumberInBooking()
+                    && booking.isPassengerRegferenceNumberEqual(referenceNumberofTrip)) {
                     Apassenger = passenger;
                 }
             })
         })
         return Apassenger;
     }
-    getAllMealsOfBooking(){
-        this.bookings.forEach(booking=>{
+    getAllMealsOfBooking() {
+        this.bookings.forEach(booking => {
             booking.getAllBookingTrips().forEach((trip) => {
-                trip.getBookingFlight().forEach((flight) =>{
+                trip.getBookingFlight().forEach((flight) => {
                     flight.getMealsFromBookingFlight();
-                } )
+                })
             })
         })
     }
