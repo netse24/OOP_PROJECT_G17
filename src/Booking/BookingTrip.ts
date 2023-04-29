@@ -6,6 +6,7 @@ export enum ReturnTicket{
 }
 export class BookingTrip {
     private passengers: Passenger[] = [];
+    
     private bags: Bag[] = [];
     private bookingFlight: BookingFlight[] = [];
 
