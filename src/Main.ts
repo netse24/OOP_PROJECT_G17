@@ -82,6 +82,7 @@ airline1.addBooking(booking1);
 // Q3. As an airline pilot, I want to know, for a given date, how many flights I have to join.
 let pilot1 = new Pilot(100,'ka','ry',32,Gender.FEMALE)
 let date1 = new DateTime('10/05/2023','7:00 AM');
+let date2 = new DateTime('10/05/2023','7:00 PM');
 
 let flight1 = new Flight('B2')
 let flight2 = new Flight('B3')
@@ -94,9 +95,10 @@ bookingFlight1.setAMealFromBookingFlight(Meal.HALAL)
 bookingFlight1.setAMealFromBookingFlight(Meal.VEGAN)
 bookingFlight1.setAMealFromBookingFlight(Meal.VEGENTARIAN)
 pilot1.addDateFlight(date1);
+pilot1.addDateFlight(date2);
 pilot1.addFlight(flight1);
 pilot1.addFlight(flight2);
-// console.log(pilot1);
+console.log(pilot1);
 // Q4 ------------------------------------------------
 // create booking flight
 let bookingFlight = new BookingFlight();
