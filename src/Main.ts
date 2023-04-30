@@ -1,7 +1,7 @@
 import { Bag } from "./Booking/Bag";
 import { Booking } from "./Booking/Booking";
 import { BookingFlight } from "./Booking/BookingFlight";
-import { BookingTrip } from "./Booking/BookingTrip";
+import { BookingTrip, ReturnTicket } from "./Booking/BookingTrip";
 import { Meal } from "./Booking/Meal";
 import { Flight } from "./Flight/Flight";
 import { Chef } from "./Person/Chef";
@@ -50,6 +50,8 @@ booking3.addPassenger(passenger3)
 let trip1 = new BookingTrip();
 let trip2 = new BookingTrip();
 let trip3 = new BookingTrip();
+trip1.setReturnTicket(ReturnTicket.return);
+trip1.setReturnTicket(ReturnTicket.return);
 
 let bookingFlight2 = new BookingFlight();
 bookingFlight2.setAMealFromBookingFlight(Meal.VEGENTARIAN);
@@ -77,7 +79,7 @@ airline1.addEmployee(emyployee2);
 airline1.addEmployee(emyployee3);
 airline1.addEmployee(emyployee4);
 airline1.addBooking(booking1);
-// console.log("Passenger booking is:",airline1.getAllBookings(),"Trips") // test booking trip
+console.log("Passenger return ticket :",trip1.getAllReturnTicket()) // test booking trip
 
 // Q3. As an airline pilot, I want to know, for a given date, how many flights I have to join.
 let pilot1 = new Pilot(100,'ka','ry',32,Gender.FEMALE)
@@ -98,7 +100,9 @@ pilot1.addDateFlight(date1);
 pilot1.addDateFlight(date2);
 pilot1.addFlight(flight1);
 pilot1.addFlight(flight2);
-console.log(pilot1);
+// console.log(pilot1);
+
+
 // Q4 ------------------------------------------------
 // create booking flight
 let bookingFlight = new BookingFlight();
@@ -139,7 +143,6 @@ ROYAL.addEmployee(emy3)
 ROYAL.addEmployee(emy4)
 
 // console.log("The money that need to pay for employee:",ROYAL.getAllSalary());
-
 
 
 
