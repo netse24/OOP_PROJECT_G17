@@ -79,7 +79,8 @@ airline1.addEmployee(emyployee2);
 airline1.addEmployee(emyployee3);
 airline1.addEmployee(emyployee4);
 airline1.addBooking(booking1);
-console.log("Passenger return ticket :",trip1.getAllReturnTicket()) // test booking trip
+
+// console.log("Passenger return ticket :",trip1.getAllReturnTicket()) // test booking trip
 
 // Q3. As an airline pilot, I want to know, for a given date, how many flights I have to join.
 let pilot1 = new Pilot(100,'ka','ry',32,Gender.FEMALE)
@@ -118,13 +119,9 @@ let flight = new Flight('AD1');
 flight.addBookingFlight(bookingFlight);
 flight.addMealFromBookingFlight();
 // console.log(flight.getMeals())
-
-
 chef.addFight(flight);
 
 chef.getMeals();
-
-
 // console.log(chef.getMeals());
 
 // Q5  As an airline manager, I want to find out how much salary I pay all my employees.
